@@ -31,8 +31,100 @@
 <hr>
 
 <br>
-Please find a the python scripts to reduce and plot the data at this 
+Please find the python scripts to reduce and plot the data at this 
 <a href=https://www.dropbox.com/sh/lqfzhgzvu140xmc/AABCylFR1BqxtwmCch2huKaLa?dl=0>link</a>
- and let me know of any bugs/comments/questions.
+ and let me know of any bugs/comments/questions.  The scripts should produce the plots below, with SNRs shown in the Table.  Note the SNRs may not be exactly the same if changes are made to the methods of computing PCA (ie random SVD vs the data covariance matrix).
 </br>
+
+<center>
+<figure>
+  <img src="fig_hr8799.png" alt="HR8799" width="856" height="334" align="auto">
+  <figcaption>Fig. 1.—: (a) ADI reduction of HR8799 data, using conventional data medianing. (b) The same reduction using the variance-weighting method. (c) From top to bottom, subframes of planets b, c, d, and e in conventional and variance-weighted ADI. The white circle shows the photometric region of interest used to calculate SNRs. In all images, the colorscale is the same, with the color showing SNR. Note two streaks in the variance-weighted image due to uncorrected bad pixels.
+  </figcaption>
+</figure>
+</center>
+
+
+<table style = "margin: 0px auto;">
+<thead>
+<tr class="header">
+<th align="center">Reduction algorithm</th>
+<th align="center">SNR, ADI; <span class="math inline"><em>b</em>, <em>c</em>, <em>d</em>, <em>e</em></span></th>
+<th align="center">SNR, weighted ADI; <span class="math inline"><em>b</em>, <em>c</em>, <em>d</em>, <em>e</em></span></th>
+<th align="center">% improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">PCA, 5 comp.</td>
+<td align="center">3.86, 7.67, 5.14, 3.37</td>
+<td align="center">4.55, 9.59, 6.72, 4.21</td>
+<td align="center">18, 25, 31, 25</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>PCA, 10 comp.</strong></td>
+<td align="center"><strong>3.72, 5.8, 5.1, 2.92</strong></td>
+<td align="center"><strong>4.6, 7.42, 6.71, 3.46</strong></td>
+<td align="center"><strong>24, 28, 31, 18</strong></td>
+</tr>
+<tr class="odd">
+<td align="center">PCA, 15 comp.</td>
+<td align="center">3.37, 4.51, 3.99, 2.33</td>
+<td align="center">4.16, 5.72, 5.48, 2.54</td>
+<td align="center">24, 27, 37, 9</td>
+</tr>
+<tr class="even">
+<td align="center">Annular PCA, 5 comp.</td>
+<td align="center">3.85, 8.25, 5.66, 4.24</td>
+<td align="center">4.78, 9.61, 7.72, 4.49</td>
+<td align="center">24, 16, 36, 6</td>
+</tr>
+<tr class="odd">
+<td align="center">Annular PCA, 10 comp.</td>
+<td align="center">3.87, 5.41, 4.69, 3.36</td>
+<td align="center">4.79, 6.74, 6.45, 4.02</td>
+<td align="center">24, 24, 38, 20</td>
+</tr>
+<tr class="even">
+<td align="center">Annular PCA, 15 comp.</td>
+<td align="center">3.7, 4.64, 3.89, 2.95</td>
+<td align="center">4.57, 5.48, 5.24, 3.66</td>
+<td align="center">23, 18, 35, 24</td>
+</tr>
+<tr class="odd">
+<td align="center">LLSG, 5 comp.</td>
+<td align="center">5.16, 8.02, 6.32, 3.66</td>
+<td align="center">5.84, 8.58, 7.53, 4.07</td>
+<td align="center">13, 7, 19, 11</td>
+</tr>
+<tr class="even">
+<td align="center">LLSG, 10 comp.</td>
+<td align="center">4.04, 6.23, 2.93, 1.26</td>
+<td align="center">4.72, 6.53, 3.64, 1.58</td>
+<td align="center">17, 5, 24, 25</td>
+</tr>
+<tr class="odd">
+<td align="center">LLSG, 15 comp.</td>
+<td align="center">3.78, 4.13, 2.59, 0.96</td>
+<td align="center">4.39, 4.39, 3.19, 1.19</td>
+<td align="center">16, 6, 23, 24</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img src="fig_empty.png" alt="" width="1" height="1" align="middle">
+  <figcaption>Table 1:: Comparison of SNRs achieved using conventional ADI and variance-weighted ADI, for the planets around HR8799, using different reduction algorithms. “PCA” corresponds to principal components analysis calculated over the full frame; “Annular PCA” is the same except calculated over annular regions six pixels wide; “LLSG” refers to the low-rank plus sparse decomposition algorithm. In all cases, the reductions are identical except for the final derotation and medianing step. The SNRs are calculated on a per-pixel level over a circular region of interest of radius 3; see the right panel of Figure 1 (the reduction corresponding to Figure 1 is shown in bold.) In all cases, the variance-weighted approach improves the SNR.
+  </figcaption>
+</figure>
+
+<center>
+<figure>
+  <img src="fig_hd48097.png" alt="HD48097" width="856" height="808" align="auto">
+  <figcaption>
+  Fig 2.  Disk imaging comparison. (a) Injected disk, with a max intensity of 100 counts/frame. (b) the first of 100 images in the unreduced datacube, shown for intensity comparison on the same scale. (c) SNR after reduction and derotation conventional ADI. (d) SNR after the same reduction but variance-weighted ADI derotation. Note that in the variance-weighted frames, streaks are visible from unremoved bad pixels.
+  </figcaption>
+</figure>
+</center>
+
+
 </body></html>
