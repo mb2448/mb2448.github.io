@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="home.css" type="text/css"> 
+  <title>Michael Bottom-SDC</title>
+<style>
+h3 {display:inline;}
+h4 {display:inline;}
+}</style>
+
+</head><body style="">
+<h2> Stellar Double Coronagraph</h2>
+
+<hr>
+
+<table cellpadding="10" align="center">
+    <tbody><tr>
+        <td>    
+            <a href="index.html">Home</a>
+        </td>
+        <td>    
+<a href="projects.html">Research</a>
+        </td>
+        <td>    
+<a href="teaching.html">Teaching</a>
+        </td>
+        <td>    
+<a href="publications.html">Publications</a>
+        </td>
+    </tr>
+</tbody></table>
+<hr>
+<br>
+<br>
+<h4> High-contrast imaging with the Stellar Double Coronagraph</h4>
+<p>
+<br>
+SDC's flexibility and versatility make it a unique platform for high contrast imaging research.  Below I describe active research programs using the instrument, including novel detectors, optical technologies, and observing programs.
+<br><br>
+If you are interested in using SDC, please contact me <a href="index.html">here</a>.
+<br><br>
+
+
+<h4>DARKNESS</h4><br>
+Microwave kinetic inductance detectors (MKIDs) are superconducting arrays that have advantages over conventional silicon detectors, including intrinsic energy resolution (meaning each pixel can tell the energy, or equivalently "color", of a photon) without the need for extra dispersing optics, no read noise, no dark current, and microsecond timing accuracy.  These properties are well suited to the field of high contrast imaging, where very low noise detectors are needed to detect faint planets, energy resolution is needed to disambiguate planets from stellar noise (and measure planet spectra!), and photon timing data can be used to disambiguate planetary photons and speckle photons.  No other detectors currently possess all these properties, but until recently, the advantages had never been demonstrated for exoplanet imaging.
+<br><br>
+<img src="darkness.png" width = 500 class="center">
+<center><i>The star pi Herculis taken with the DARKNESS camera, unocculted (top left) showing the diffraction limited point-spread function, and with SDC providing coronagraphic suppression (bottom left).  For this application, we replaced the vortex coronagraphs with simple Lyot coronagraphs for better tolerance of tip/tilt residuals.  Figure 14 from Meeker et al. 2018</i></center>
+<br>
+<br>
+<a href="https://web.physics.ucsb.edu/~bmazin/index.html">Ben Mazin's group</a> at UCSB developed the first MKID-based high contrast imaging camera, <a href="https://doi.org/10.1088/1538-3873/aab5e7">DARKNESS</a> (Dark-speckle Near-IR Energy-resolved Superconducting Spectrophotometer).  DARKNESS was installed behind SDC in July 2016, with science operations beginning shortly after. DARKNESS has provided the first on-sky demonstration of MKIDs for high contrast imaging. It is the first diffraction limited MKID instrument, and the first combination of MKIDs with a coronagraph.  A particularly interesting result to come out of the on-sky data was the first demonstration of photon-timing discrimination between stellar speckle and true companions (see Figure 15 in the above link). 
+<br><br>
+<h4>Binary star high contrast imaging</h4><br>
+While a large fraction of stars are in binary systems, binary stars are typically excluded from high contrast imaging surveys, as the light from the star <i>not</i> suppressed by the coronagraph will overwhelm any faint planets orbiting either star.  As such, very little is known about planet formation in binary systems.
+<br>
+<br>
+<img src="binaries.jpg" width = 500 class="center">
+<center><i>A subset of targets from Kuhn et al. (2018), showing the simultaneous nulling of close binary systems.  This data was taken at Palomar Observatory in late 2017.</i></center>
+<br>
+SDC has two focal plane coronagraphs that are independently controllable, allowing for simultaneous suppression of the full 360 degree fields surrounding both stars. <a href = "http://www.schmid-group.ethz.ch//people/person-detail.html?persid=213442">Jonas Kuhn (ETH Zurich)</a>, <a href = "https://www.asc.ohio-state.edu/wang.12220/">Ji Wang (OSU)</a>, and <a href = "https://science.jpl.nasa.gov/people/Morales/">Farisa Morales (JPL)</a> are <a href="https://doi.org/10.1117/12.2313448">leading a pilot survey</a> for planets around binary systems using SDC.  This opens up an unique parameter space for exploration, potentially for detections of substellar objects in close orbits around binary systems.
+<br><br>
+<h4>Self-coherent camera</h4><br>
+Self-coherent cameras (SCCs) are optical devices that create fringes over the scattered starlight in the focal plane.  Through analysis of these fringes, both the phase and amplitude of the electric field of the starlight can be measured.  This information can be used both to correct speckles and to detect incoherent light from planets.  SCCs are considered a leading wavefront correction technology for the next generation of ground and space-based telescopes.
+<br><br>
+
+<img src="scc.jpeg" width = 500 class="center">
+<center><i>Demonstration of the self-coherent camera performance on SDC.  The systematic errors from starlight (or, in this case, a simulated star) are quickly suppressed by the control loop.  Image from Galicher et al. (2017)</i></center>
+<br>
+<a href = "http://www.lesia.obspm.fr/perso/raphael-galicher/">Raphael Galicher (Paris Obs.)</a>, Pierre Baudoz (Paris Obs.) and <a href = "http://pma.divisions.caltech.edu/people/jacques-robert-delorme">Jacques-Robert Delorme (CIT)</a> installed a self-coherent camera on SDC and used it to <a href = "http://www.iac.es/congreso/AO4ELT5/media/proceedings/proceeding-065.pdf">demonstrate the ability to efficiently suppress speckle aberrations in the instrument</a>.  This was the first installation of an SCC in a telescope environment.  Unfortunately, the weather did not cooperate and on-sky results lie in the future.
+<br><br>
+
+</body></html>

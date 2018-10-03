@@ -1,16 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="home.css" type="text/css"> 
   <title>Michael Bottom-Projects</title>
 <style>
 h3 {display:inline;}
 h4 {display:inline;}
 }</style>
-  
-  
-  
 
 </head><body style="">
-<h2> Current and past research </h2>
+<h2> Research interests</h2>
 
 <hr>
 
@@ -31,105 +29,103 @@ h4 {display:inline;}
     </tr>
 </tbody></table>
 <hr>
-<h3> Current projects </h3>
+My research is located at the intersection of astronomy, optics, and data analysis, working towards the goal of taking pictures of planets around other stars.  For ground-based observing and instrument development, I primarily make use of the <a href = "http://www.keckobservatory.org/">W.M. Keck Observatory</a> in Hawaii and the legendary <a href = "http://www.astro.caltech.edu/palomar/homepage.html">Palomar Observatory</a> in California, but have also used NASA's <a href = "http://irtfweb.ifa.hawaii.edu/">Infrared Telescope Facility</a>. In observatory development, I worked on designing and building the <a href = "https://www.cfa.harvard.edu/minerva/">Minerva </a>array on Mt. Hopkins in Arizona.  My space-based efforts are towards developing the <a href = "https://wfirst.gsfc.nasa.gov/">WFIRST coronagraph</a> and <a href = "https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA20909">Starshade</a> mission.  I also maintain an interest in post-processing and analysis of exoplanet imaging data.<br><br>
+
+<h3> Current ground-based projects </h3>
 <br>
 <br>
-<h4> High-contrast imaging with the a multistage vortex coronagraph </h4>
+<h4> High-contrast imaging with the Stellar Double Coronagraph</h4>
 <p>
-High contrast imaging is the most promising way of studying planets at
-intermediate to large separations from their host stars.&nbsp;
-Discovery of these planets is necessary in order to understand
-exoplanet population statistics, exoplanet chemistry, the formation and
-migration mechanisms of planetary systems, and their relationship to
-dust structures.&nbsp; However, direct imaging of planets is currently
-limited both by achievable contrast and by the inner working angle,
-which limit how faint and close-in companions can be detected.&nbsp; To
-make progress in these areas, we are developing a new coronagraph at
-JPL, the <a href="http://iopscience.iop.org/article/10.1088/1538-3873/128/965/075003/meta"> Stellar Double Coronagraph (SDC). </a>&nbsp; Unlike conventional
-coronagraphs, this uses a device called an optical vortex,&nbsp;
-capable of reaching high contrast (10<sup>-6</sup>) 
-at very small angles
-(~70 mas at H-band), or 0.9 <small>λ</small>/D , from the
-ground.&nbsp;
+High-contrast imaging is the most promising way of studing planets at intermediate to large separations from their host stars. Discovery of these planets is necessary in order to understand exoplanet population statistics, the formation and migration mechanisms of planetary systems, and their relationships to dust structures.  It is also the only general method of getting spectral measurements of exoplanets, which give clues as to their composition and chemistry, including their potential for hosting life.  However, direct imaging of planets is extremely challenging, and is currently limited both by achievable contrast and by the inner working angle, which limit how faint and close-in companions can be detected. 
+<br>
+<img src="sdc.jpeg" width = 500 class="center">
+<center><i>Optical layout of the Stellar Double Coronagraph.  The light enters from the Palomar Hale telescope adaptive optics system at the input fold mirror.  The light exits to the science camera of choice at the output fold mirror.</i></center>
+<br>
+For my PhD thesis, I worked with talented JPL engineers to build the <a href="http://iopscience.iop.org/article/10.1088/1538-3873/128/965/075003/meta"> Stellar Double Coronagraph (SDC),</a> a unique high-contrast imaging instrument.  In its default observing configuration, SDC uses two optical vortices in series to redistribute starlight out of the focal plane, while letting planet light pass through unimpeded.  However, SDC is a highly reconfigurable instrument, supporting many observing modes including parallel coronagraphs, different pupil and focal plane masks, and internal and external wavefront control.
+<br>
+<br>
+SDC's flexibility and versatility has led it being <a href="sdc.html">used for interesting new research by various teams</a>.  I am particularly proud that SDC has contributed to multiple PhD theses, including Seth Meeker (UCSB), Paschal (formerly Matthew) Strader (UCSB), and Jacques-Robert Delorme (Paris Observatory), with more on the way. 
+<br><br>
+<h4>Coherence differential imaging</h4>
+<br>Starlight can be “cancelled” by other starlight, but starlight can never be canceled by planet light.  This is the principle behind coherence differential imaging, which uses optical elements to actively modulate scattered starlight in the focal plane.  In areas where there is a planet, no change in intensity will occur, and this can be identified in the frame-to-frame variations of the data.  The principle of using coherence to discover planets in scattered starlight has been around since <a href = "http://iopscience.iop.org/article/10.1086/423980">2004</a>, but remained hypothetical until recently. 
+<br><br>
 
-</p><p>
-I worked with highly talented JPL engineers to build and commission SDC as one of my primary thesis projects, contributing much of the initial effort to get the instrument working.  In addition to the hardware and optical assembly, I wrote all of the instrument and wavefront control software, as well as the data reduction pipeline.  I led a survey of nearby stars after the initial commissioning run.
-</p>
+<img src="hd49197b.png" width = 500 class="center">
+<center><i>Demonstration of coherence differential imaging on the star HD 49197.  The left image shows the mean of the image frames; the right image shows the same data when the coherent part of the light has been removed, revealing the brown dwarf companion.</i></center>
 
-<p>
-SDC's flexibility has led to it being used for many interesting new avenues of research.  Recently, we added a simple internal interferometer to give it the ability to discriminate planets from scattered starlight based on optical coherence, a new and promising technique, which we <a href="http://mnras.oxfordjournals.org/content/464/3/2937"> successfully demonstrated on-sky for the first time</a>.  It is also the coronagraphic frontend for <a href="http://web.physics.ucsb.edu/~bmazin/Mazin_Lab/Welcome.html">DARKNESS</a>, a new kind of infrared microwave kinetic inductance detector array (MKID), which has unique abilities useful for imaging exoplanets, like photon-counting and intrinsic spectral resolution.  Finally, we have been awarded time to use SDC to look for planets around binary systems, using each of the internal coronagraphs in parallel to suppress starlight from both stars at the same time.  It is the only instrument in the world that has this capability.
-</p>
+<br>
+ We designed and built a interferometric coherence differential imaging system with the Stellar Double Coronagraph, and used it to <a href="https://doi.org/10.1093/mnras/stw2544">successfully image the brown dwarf HD 49197b</a>, even though it was hidden in the stellar speckles surrounding the star.  This is the first detection of a substellar companion, or perhaps any companion, using the coherence properties of light.
 
 <p></p>
 
-<p>
-</p><h4> Minerva </h4>
-<p>
+<h4>Focal-plane wavefront control on ground-based telescopes</h4><br>
+A key aspect of high contrast imaging is focal plane wavefront control.  Here, quasi-static optical errors are sensed and corrected in the focal plane, meaning fully common-path correction.  Instead of using separate wavefront sensing hardware (necessarily non common path), the deformable mirror shape is changed to determine the phase and amplitude of the electric field in the focal plane.   Much effort is focused on perfecting focal-plane wavefront control for future space-based telescopes, but less effort has been focused on ground-based telescopes, due to the the challenges of making the adaptive optics system, coronagraph, and science detector to work as one unit in the unstable thermal, mechanical, and atmospheric observatory environments.
+<br>
+<br>
+<img src="xiboo2.png" width = 700 class="center">
+<center><i>Speckle nulling on the star Xi Boo A, improving contrast by 5-10 in 12 iterations.  Keck II telescope, NIRC2 detector in L'.  Data taken August 2017.</i></center>
+<br>
+I led the development of a <a href="https://doi.org/10.1117/12.2233025">focal plane wavefront control system at Palomar and Keck</a>.  In recent tests at Keck, we achieved factor of ~5-10 improvement in contrast, which significantly improves the sensitivity to lower mass planets.  We are currently limited by detector readout time, so are aiming to upgrade the NIRC2 electronics to improve efficiency and make focal plane wavefront control a routine part of high contrast imaging capabilities at Keck.
+<br>
+<br>
+Neelay Fruitwala (UCSB) recently <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10703/2311402/Active-speckle-control-with-microwave-kinetic-inductance-detectors-Conference-Presentation/10.1117/12.2311402.short?SSO=1">adapted</a> this code to work with the DARKNESS array, a unique camera based on microwave kinetic inductance detectors (MKIDs).  Each pixel of this array detect single photons with microsecond timing accuracy, has no readout noise or dark current, and has intrinsic energy resolution.  This opens the door to correcting rapid atmospheric speckles on millisecond timescales.
+
+<br><br>
+<h4>Post-processing of exoplanet imaging data</h4><br>
+Exoplanet imaging data is challenging to interpret, as the faint planets are swamped by systematic and statistical noise.  Clever observing strategies and reduction algorithms are required to recover the planets hidden in the data.  This post-processing is a key aspect of high-contrast imaging, necessary for discovery and characterization of planets and disks.
+<br><br>
+I am leading an effort at JPL to develop new ways of postprocessing exoplanet imaging data for ground and space telescopes.  This work is a collaboration between the optics, science, and data science groups, and draws on years of in-house expertise in analyzing other challenging data sets such as the cosmic microwave background.
+<br><br>
+<h3> Current space-based projects </h3>
+<br>
+<br>
+<h4>Camera development for the WFIRST Coronagraph</h4><br>
+Imaging planets like the Earth places extreme demands on detectors, as the photon rates expected are about 1 photon/meter^2/hour.  At JPL, we are developing the use of EMCCD detectors for the WFIRST coronagraph mission.  I work with the camera development team to characterize and test these detectors.
+<br><br>
+<img src="scenegen.png" width = 900 class="center">
+<center><i>Complex integral field spectrograph image created using a smartphone scene generator.  The left image shows the expected signal, uploaded to the phone; the center image shows the optomechanical layout of the scene generator; the right shows the data after readout of the EMCCD, faithfully reproducing the data.</i></center>
+<br>
+<br>
+For testing the EMCCDs, I designed an <a href = "https://doi.org/10.1117/12.2312335">optical projection system using a smartphone</a> that has a number of good features.  It can generate nearly arbitrary optical scenes, has zero background noise, high (diffraction limited) spatial resolution, very high dynamic range, and nearly Poisson-limited illumination stability, without any moving parts.  This system has replaced the multiple optomechanical setups we previously used to characterize the detectors.
+<br>
+<br>
+<h4>Starshade formation flying</h4><br>
+An alternative technology to coronagraphs are <a href = "https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA20909">starshades</a>, massive (30 meter) optical structures flying tens of thousands of kilometers in front of space telescopes to create artificial "eclipses" of stars.  By blocking the starlight, faint planets near the star may be seen by the space telescope.  An engineering challenge with starshades is that they must maintain their alignment with respect to the telescope to a tolerance of less than 1 meter at these large separations.  
+<br><br>
+At JPL, I am working on developing formation flying capabilities for the starshade using optical sensing.  Numerical simulations have been able to <a href = "https://doi.org/10.1117/12.2274086">demonstrate accuracies</a> lower than 2 centimeters in numerical simulations, and we have achieved similar levels in laboratory experiments (results to be published soon).  
+
+<br><br>
+</head><body style="">
+<h3> Past research </h3><br><br>
+<h4> Minerva </h4><br>
 Radial velocity detection of low-mass exoplanets is a challenging
 task, both due to the high precision required and large amount of
-observing time necessary for dense orbital phase coverage.&nbsp;
-Minerva (MINiature Exoplanet Radial Velocity Array) tackles these two
+observing time necessary for dense orbital phase coverage.
+Minerva <a href ="https://doi.org/10.1117/1.JATIS.1.2.027002">(MINiature Exoplanet Radial Velocity Array)</a> tackles these two
 issues simultaneously, using four automated 0.7 m telescopes
-fiber-feeding the same high-resolution spectrograph.&nbsp; It is
+fiber-feeding the same high-resolution spectrograph. It is
 designed for
 high-cadence, high-precision radial velocity searches for extrasolar
-planets orbiting nearby stars, with additional photometric
-capabilities.&nbsp; Its final location is Mt. Hopkins observatory in
-Arizona,
-but the telescope, enclosure, and related hardware are currently being
-tested and configured here in Pasadena.
-
-</p><p>I work primarily on the implementation of the telescope system--ie,
-the
-hardware and software.&nbsp; I also performed an end-to-end simulation
-of the optimal design of a Minerva-like survey, the results of which
-were published <a href="http://authors.library.caltech.edu/38389/1/670174.pdf"> here</a>.&nbsp;
-For more information, visit the <a href="http://www.cfa.harvard.edu/minerva/">project web site</a>.
-</p>
-<br> 
-<h4> Precision near-infrared radial velocities </h4>
-
-<p>The near-infrared (NIR) bands are a promising but difficult place to
-do
-high-precision Doppler spectroscopy.&nbsp; Small stars, which emit most
-of their flux in the NIR, have much higher reflex velocities from
-habitable-zone planets, making them excellent targets for
-radial-velocity surveys.&nbsp; However, until recently, the
-instrumental stability and referencing that have resulted in successful
-visible-light instruments have simply not existed in the infrared.</p>
-
-A prototype high-precision radial velocity system has been under
-development at the NASA Infrared Telescope Facility (IRTF).&nbsp; An
-isotopic methane cell is used as a wavelength reference, and a fiber
-optic scrambling system is used to produce a highly stable output
-illumination pattern.
-<p>I worked on the design, construction, and testing&nbsp; of the fiber
-optic scrambler, and participated in the commissioning run at
-IRTF.&nbsp; I am currently involved in the&nbsp; observing program,
-where we are pushing the limits of the instrument's performance, down
-to the few m/s level.</p>
-<br>
-<h3> Completed research </h3>
+planets orbiting nearby stars, with additional photometric capabilities.
 <br><br>
+I was responsible for design and implementation of hardware and software subsystems of the observatory, including 
+the <a href = "https://doi.org/10.1117/12.2055605">fiber coupling system </a> for delivering light from the telescopes to the spectrograph.
+I also performed an end-to-end simulation
+of the <a href = "http://doi.org/10.1086/670174">optimal design of a Minerva-like survey.</a>
+For more information, visit the <a href="http://www.cfa.harvard.edu/minerva/">project web site</a>.
+<br>
+<br> 
+<h4> Precision near-infrared radial velocities </h4><br>
+The near-infrared (NIR) bands are a promising but difficult place to do high-precision Doppler spectroscopy. Small stars, which emit most of their flux in the NIR, have much higher reflex velocities from habitable-zone planets, making them excellent targets for radial-velocity surveys. However, until recently, the instrumental stability and referencing that have resulted in successful visible-light instruments have simply not existed in the infrared.</p> 
+I worked on developing a <a href = "http://doi.org/10.1117/12.2023696">fiber optic radial velocity system</a> for the  the NASA Infrared Telescope Facility (IRTF). An isotopic methane cell is used as a wavelength reference, and a fiber scrambler is used to produce a highly stable output illumination pattern. <p>I worked on the design, construction, and testing of the fiber optic scrambler, and led the commissioning run at IRTF.  Later, this instrument was used as the frontend for a novel <a href="https://doi.org/10.1038/ncomms10436">infrared laser frequency comb</a> <br>
+<br>
 <h4> Spectral characterization of M dwarfs</h4>
 <p>
 M dwarfs are the most common stars in the universe, and also the longest-lived: typically, they have main-sequence lifetimes dozens to hundreds of times the current age of the universe.  The fact that they have not yet had time to evolve off of the main sequence provides a unique opportunity for characterization, as metallicity is no longer degenerate with age.
 </p>
 <p>
-Sebastian Pineda, John Johnson and I developed a method of deducing the physical properties (mass, metallicity, absolute magnitude, etc) of M dwarfs using high-resolution spectroscopy.  We combined over 15 years' worth of Keck spectra to create high signal-to-noise spectra of ~150 M dwarfs. We determined areas of the spectra sensitive to the fundamental properties of these stars, and then used  spectral indices to determine these properties for uncharacterized M dwarfs.
-</p>
-<p>
-A link to the paper can be found <a href="http://adsabs.harvard.edu/abs/2013ApJ...767...28P">here</a>
+Sebastian Pineda, John Johnson and I developed a <a href="http://adsabs.harvard.edu/abs/2013ApJ...767...28P">method</a> of deducing the physical properties (mass, metallicity, absolute magnitude, etc) of M dwarfs using high-resolution spectroscopy.  We combined over 15 years' worth of Keck spectra to create high signal-to-noise spectra of ~150 M dwarfs. We determined areas of the spectra sensitive to the fundamental properties of these stars, and then used  spectral indices to determine these properties for uncharacterized M dwarfs.
 </p>
 <br>
-
-<h4> LAEDI </h4>
-<p>LAEDI (Lock-in Amplified Externally Dispersed Interferometer) is a novel testbed instrument built to achieve an unprecedented 10 cm/s of velocity precision on celestial objects, small enough to detect the p-mode oscillations on the Sun, or even the tug of the Earth. It will point the way towards extreme-precision instruments on the next generation of telescopes, capable of detecting habitable planets around Sun-like stars.
-</p>
-<p>I assisted with the construction and testing of the hardware, particularly towards the goal of interfacing LAEDI as an instrument on the Palomar 200-inch telescope, fed by its highly advanced P3K adaptive-optics system.
-</p>
-
-<h4>Fourier transform spectroscopy of microwave filters</h4>
-<p>Before coming to graduate school, I worked in Amber Miller's CMB lab, manufacturing and testing microwave filters for use in CMB experiments.  A large fraction of this time was spent building a Fourier transform spectrometer (FTS) to test these filters.  While I don't currently do research in CMB physics, this experience taught me a great deal about optics, electronics, and being a good researcher, and motivated me to pursue a career in experimental astrophysics.</p>
 
 </body></html>
