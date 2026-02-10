@@ -117,7 +117,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #00264d!important;
+			color: #002676!important;
 		}
 
 	strong, b {
@@ -1786,7 +1786,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #00264d;
+		color: #002676;
 		font-size: 3.5em;
 	}
 
@@ -1849,7 +1849,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #00264d;
+			border-color: #002676;
 		}
 
 	select {
@@ -1954,7 +1954,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #00264d;
+			border-color: #002676;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2403,7 +2403,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #00264d;
+				background: #002676;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2622,7 +2622,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #00264d;
+			background-color: #002676;
 			color: #ffffff !important;
 		}
 
@@ -2630,14 +2630,14 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #00264d;
+				background-color: #002676;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #00264d;
+				background-color: #002676;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2725,11 +2725,11 @@ input, select, textarea {
 			}
 
 		#header header p {
-			color: #00264d;
+			color: #002676;
 		}
 
 		#header a {
-			color: #00264d;
+			color: #002676;
 		}
 
 			#header a:hover {
@@ -2777,7 +2777,7 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
-					color: #00264d;
+					color: #002676;
 				}
 
 		#header > nav {
@@ -2794,7 +2794,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #00264d;
+					border-top: solid 2px #002676;
 					display: block;
 					padding: 0;
 				}
@@ -2813,7 +2813,7 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #fff;
-							color: #00264d !important;
+							color: #002676 !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -3081,7 +3081,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #00264d;
+						background: #002676;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
