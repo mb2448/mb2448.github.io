@@ -22,6 +22,8 @@ import re
 import subprocess
 import sys
 
+MIN_WIDTH = 1500  # px — PowerPoint's default export is only 720px wide and looks blurry
+
 REPO = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = os.path.join(REPO, "header_images", "photos_for_website")
 IMG_DIR_REL = "header_images/photos_for_website"
@@ -68,10 +70,30 @@ def slide_number(path):
     return int(m.group(1)) if m else 0
 
 
+def check_resolution(files):
+    """Refuse blurry images: PowerPoint's default JPEG export is 720px wide.
+    Export with Width set to 1920 (File > Export... > JPEG on Mac)."""
+    bad = []
+    for f in files:
+        out = subprocess.run(["sips", "-g", "pixelWidth", f],
+                             capture_output=True, text=True).stdout
+        m = re.search(r"pixelWidth: (\d+)", out)
+        if m and int(m.group(1)) < MIN_WIDTH:
+            bad.append(f"{os.path.basename(f)} ({m.group(1)}px)")
+    if bad:
+        sys.exit(
+            f"ABORT: these images are below {MIN_WIDTH}px wide and will look blurry:\n  "
+            + "\n  ".join(bad)
+            + "\nRe-export from PowerPoint with Width = 1920 "
+            "(File > Export... > JPEG, set Width), then re-run."
+        )
+
+
 def regenerate_index():
     files = sorted(glob.glob(os.path.join(IMG_DIR, "*.jpeg")), key=slide_number)
     if not files:
         sys.exit(f"No .jpeg files found in {IMG_DIR_REL}/")
+    check_resolution(files)
     random.shuffle(files)
     block = "\n"
     for f in files:
